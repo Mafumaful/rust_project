@@ -1,0 +1,10 @@
+services:
+  app:
+    image: mafumaful/rust:1.21
+    build: 
+      context: ./docker
+      dockerfile: ./rust/Dockerfile
+      target: dev
+    volumes:
+        - ./code:/home/docker/code
+    tty: true
